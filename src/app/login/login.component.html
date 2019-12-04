@@ -1,0 +1,45 @@
+<div class="login-page">
+
+  <mat-card class="login-card">
+
+    <div class="card-wrapper">
+
+      <form (submit)="submitLogin()" [formGroup]="loginForm" class="login-form">
+
+        <mat-error *ngIf="isError" class="error-msg">
+          {{errorMsg}}
+        </mat-error>
+
+        <mat-form-field color="accent" class="login-field">
+          <input formControlName="email" type="email" name="email" matInput placeholder="Введіть емейл">
+          <mat-error *ngIf="loginForm.controls['email'].hasError('pattern')">
+            Введіть будь ласка валідний емейл
+          </mat-error>
+          <mat-error *ngIf="loginForm.controls['email'].hasError('required')">
+            Емейл поле потрібно <strong>обов'язково</strong> заповнити
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field color="accent" class="login-field">
+          <input formControlName="password" type="password" name="password" matInput placeholder="Введіть пароль">
+          <mat-error *ngIf="loginForm.controls['password'].hasError('pattern')">
+            Введіть будь ласка валідний пароль
+          </mat-error>
+          <mat-error *ngIf="loginForm.controls['password'].hasError('required')">
+            Поле з паролем потрібно <strong>обов'язково</strong> заповнити
+          </mat-error>
+        </mat-form-field>
+
+        <div class="button-wrapper">
+          <button [disabled]="isError || !loginForm.valid || disabled" type="submit" class="submit-btn" mat-flat-button
+                  color="accent">
+            Увійти
+          </button>
+        </div>
+
+      </form>
+    </div>
+
+  </mat-card>
+
+</div>
