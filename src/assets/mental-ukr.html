@@ -1,0 +1,282 @@
+﻿<html>
+<head>
+  <script src="jquery-3.1.0.js"></script>
+  <script src="bootstrap.js"></script>
+  <script src="script.js"></script>
+  <link rel="stylesheet" type="text/css" href="bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Соробан</title>
+</head>
+<body>
+<header></header>
+
+<div id='main' class='row'>
+  <div id='settings' class='col-md-3'>
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingSettings">
+        <h4 class="panel-title">
+          <a role="button" data-toggle="collapse" href="#collapseSettings" aria-expanded="true"
+             aria-controls="collapseSettings">
+            Налаштування
+          </a>
+        </h4>
+      </div>
+
+      <div id="collapseSettings" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingSettings">
+        <div class="panel-body">
+          <form class="form-horizontal">
+            <!--<div class="form-group col-md-12">-->
+            <!--<button type="button" id='login' class="btn btn-primary" data-toggle="modal" data-target="#modal-login">Ввести пароль</button>-->
+            <!--</div>-->
+            <div class="form-group">
+              <label class='col-md-8'>Інтервал показу чисел</label>
+              <div class='col-md-4'>
+                <select id='interval' class="form-control select_settings">
+                  <option>0.3</option>
+                  <option>0.5</option>
+                  <option>0.8</option>
+                  <option selected>1</option>
+                  <option>1.2</option>
+                  <option>1.4</option>
+                  <option>1.8</option>
+                  <option>2.0</option>
+                  <option>2.2</option>
+                  <option>2.5</option>
+                  <option>3</option>
+                  <option>3.2</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class='col-md-8'>Кількість чисел за тест</label>
+              <div class='col-md-4'>
+                <select id='number' class="form-control select_settings">
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                  <option>6</option>
+                  <option>7</option>
+                  <option>8</option>
+                  <option>9</option>
+                  <option>10</option>
+                  <option>11</option>
+                  <option>12</option>
+                  <option>13</option>
+                  <option>14</option>
+                  <option>15</option>
+                  <option>16</option>
+                  <option>17</option>
+                  <option>18</option>
+                  <option>19</option>
+                  <option>20</option>
+                </select>
+              </div>
+            </div>
+            <div>
+              <label>Виводити</label>
+              <div class="form-group">
+                <div class='col-md-5'>
+                  <label><input type="radio" name="optionsOut" id="optionsOutByRule" value="rule" checked>
+                    правило</input></label>
+                </div>
+                <div class='col-md-7'>
+                  <select id='outRule' class="form-control">
+                    <option value='smallfriendsplus' disabled>Прості числа</option>
+                    <option value='plusminus12' selected>+1+2-1-2</option>
+                    <option value='plusminus34'>+2-3+2-3</option>
+                    <option value='plusminus56'>+5+6-5-6</option>
+                    <option value='plusminus78'>+7+8-7-8</option>
+                    <option value='plusminus9'>+9-9</option>
+                    <option value='plusminus1040'>+10-40</option>
+                    <option value='plusminus5080'>+50-80</option>
+                    <option value='smallfriendsplus' disabled>Маленькі друзі (5)</option>
+                    <option value='smallfriendsplus4'>(+-4=+5-1)</option>
+                    <option value='smallfriendsplus3'>(+-3=+5-2)</option>
+                    <option value='smallfriendsplus2'>(+-2=+5-3)</option>
+                    <option value='smallfriendsplus1'>(+-1=+5-4)</option>
+                    <option value='smallfriendsminus' disabled>Маленькі друзі (-5)</option>
+                    <option value='smallfriendsminus4'>(-4=+1-5)</option>
+                    <option value='smallfriendsminus3'>(-3=+2-5)</option>
+                    <option value='smallfriendsminus2'>(-2=+3-5)</option>
+                    <option value='smallfriendsminus1'>(-1=+4-5)</option>
+                    <option value='bigfriendsplus' disabled>Великі друзі (10)</option>
+                    <option value='bigfriendsplus9'>(+9=-1+10)</option>
+                    <option value='bigfriendsplus8'>(+8=-2+10)</option>
+                    <option value='bigfriendsplus7'>(+7=-3+10)</option>
+                    <option value='bigfriendsplus6'>(+6=-4+10)</option>
+                    <option value='bigfriendsplus5'>(+5=-5+10)</option>
+                    <option value='bigfriendsplus4'>(+4=-6+10)</option>
+                    <option value='bigfriendsplus3'>(+3=-7+10)</option>
+                    <option value='bigfriendsplus2'>(+2=-8+10)</option>
+                    <option value='bigfriendsplus1'>(+1=-9+10)</option>
+                    <option value='familyplus' disabled>Cім'я (+)</option>
+                    <option value='familyplus9'>(+9=+4-5+10)</option>
+                    <option value='familyplus8'>(+8=+3-5+10)</option>
+                    <option value='familyplus7'>(+7=+2-5+10)</option>
+                    <option value='familyplus6'>(+6=+1-5+10)</option>
+                    <option value='bigfriendsminus' disabled>Великі друзі (-10)</option>
+                    <option value='bigfriendsminus9' disabled>(-9=-10+1)</option>
+                    <option value='bigfriendsminus8' disabled>(-8=-10+2)</option>
+                    <option value='bigfriendsminus7' disabled>(-7=-10+3)</option>
+                    <option value='bigfriendsminus6' disabled>(-6=-10+4)</option>
+                    <option value='bigfriendsminus5' disabled>(-5=-10+5)</option>
+                    <option value='bigfriendsminus4' disabled>(-4=-10+6)</option>
+                    <option value='bigfriendsminus3' disabled>(-3=-10+7)</option>
+                    <option value='bigfriendsminus2' disabled>(-2=-10+8)</option>
+                    <option value='bigfriendsminus1' disabled>(-1=-10+9)</option>
+                    <option value='familyminus' disabled>Cім'я (-)</option>
+                    <option value='familyminus9' disabled>(-9=-10+5-4)</option>
+                    <option value='familyminus8' disabled>(-8=-10+5-3)</option>
+                    <option value='familyminus7' disabled>(-7=-10+5-2)</option>
+                    <option value='familyminus6' disabled>(-6=-10+5-1)</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class='col-md-5'>
+                  <label><input type="radio" name="optionsOut" id="optionsOutByRandom" value="random"> випадкові
+                    числа</input></label>
+                </div>
+                <div class='col-md-7'>
+                  <select id='outRandom' class="form-control" disabled>
+                    <option value='10'>-9..9</option>
+                    <option value='100'>-99..99</option>
+                    <option value='1000'>-999..999</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class='col-md-8'>Розмір чисел</label>
+              <div class='col-md-4'>
+                <select id='set_digits_size' class="form-control select_settings">
+                  <option>100</option>
+                  <option>150</option>
+                  <option>200</option>
+                  <option>250</option>
+                  <option selected>300</option>
+                  <option>350</option>
+                  <option>400</option>
+                  <option>450</option>
+                  <option>500</option>
+                </select>
+              </div>
+            </div>
+            <label><input type="checkbox" id='set_play_sounds'/> Звуки</label><br/>
+            <label><input type="checkbox" id='set_hide_others' checked/> Приховати інші елементи</label>
+            <label><input type="checkbox" id='set_show_progress' checked/> Показувати рядок прогресу</label>
+            <label><input type="checkbox" id='set_show_coundown'/> Відлік перед початком тесту</label>
+            <label><input type="checkbox" id='set_show_answer'/> Показувати відповідь після тесту</label>
+            <label><input type="checkbox" id='set_repeat' checked/> Автоматично запускати тест заново</label>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id='test' class='col-md-6'>
+    <div id='start'>
+      <button type="button" id='starttest' class="btn btn-primary btn-lg btn-block">Почати тест</button>
+      <button type="button" id='stoptest' class="hidden btn btn-warning btn-lg btn-block">Перервати тест</button>
+      <div id='countdown'><span></span></div>
+    </div>
+    <div id='progress_countdown' class="progress hidden">
+      <div class="progress-bar progress-bar-warning" style="width: 33%"></div>
+      <div class="progress-bar progress-bar-success" style="width: 33%"></div>
+      <div class="progress-bar progress-bar-info" style="width: 34%"></div>
+    </div>
+    <div id='progress_test' class="progress">
+      <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
+           style="width: 0%;"></div>
+    </div>
+    <div id='digit' class='center-block'></div>
+    <div id='answer_block' style='display: none'>
+      <div class='form-group'>
+        <label for="answer">Відповідь:</label>
+        <input type='text' id="answer" autocomplete="off"></input>
+      </div>
+      <button type="button" id='check_answer' class="btn btn-success btn-lg btn-block">Перевірити</button>
+    </div>
+    <div id='result'>
+
+    </div>
+  </div>
+  <div id='statistics' class='col-md-3'>
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingStatistics">
+        <h4 class="panel-title">
+          <a role="button" data-toggle="collapse" href="#collapseStatistics" aria-expanded="true"
+             aria-controls="collapseStatistics">
+            Статистика
+          </a>
+        </h4>
+      </div>
+      <div id="collapseStatistics" class="panel-collapse collapse in" role="tabpanel"
+           aria-labelledby="statistics_panel">
+        <div class="panel-body">
+          Тут буде відображатися статистика - ім'я дитини, кількість спроб, правильно / не правильно і т.і.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer></footer>
+
+<div id='image_result' class='hidden'>
+  <img id='correct' class='hidden' src='correct.png'/ ><br/>
+  <img id='wrong' class='hidden' src='wrong.png'/>
+</div>
+
+<!-- Modal -->
+<!--<div class="modal fade" id="modal-login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">-->
+<!--<div class="modal-dialog" role="document">-->
+<!--<div class="modal-content">-->
+<!--<div class="modal-header">-->
+<!--<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>-->
+<!--<h4 class="modal-title" id="myModalLabel">Авторизація</h4>-->
+<!--</div>-->
+<!--<div class="modal-body">-->
+<!--<label>Введіть пароль:</label>-->
+<!--<input type="text" class="form-control" id="password"/>-->
+<!--<p id='wrong_password' class='hidden'>Пароль не правильний. Повторіть спробу:</p>-->
+<!--</div>-->
+<!--<div class="modal-footer">-->
+<!--<button type="button" id='check_password' class="btn btn-primary">Перевірити пароль</button>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+
+</body>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-auth.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCYgoZR3_RjVnSacse5JDBu2bE1oZgGZdw",
+    authDomain: "mental-arithmetica.firebaseapp.com",
+    databaseURL: "https://mental-arithmetica.firebaseio.com",
+    projectId: "mental-arithmetica",
+    storageBucket: "mental-arithmetica.appspot.com",
+    messagingSenderId: "494829127215",
+    appId: "1:494829127215:web:f5362b00948f87756668da"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      // User is signed in.
+      initApp()
+    } else {
+      window.location.href= '/login'
+    }
+  });
+</script>
+</html>
