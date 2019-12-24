@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import {TutorialComponent} from './tutorial/tutorial.component';
 
 const routes: Routes = [
   {
@@ -10,6 +11,10 @@ const routes: Routes = [
     path: '',
     redirectTo: 'login',
     pathMatch: 'full'
+  },
+  {
+    path: 'tutorial',
+    component: TutorialComponent
   }
 ];
 

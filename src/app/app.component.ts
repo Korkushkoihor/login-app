@@ -18,7 +18,7 @@ export class AppComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.subscriptions.push(this.loginService.getUserInfo()
       .subscribe(user => {
-        if (user) {
+        if (user && window.location.href.indexOf('/tutorial') <= 0) {
           window.location.href = '/assets/mental-ukr.html';
         }
       }));

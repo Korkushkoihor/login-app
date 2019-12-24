@@ -1,0 +1,29 @@
+.tutorial-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  .router-btn {
+    color: #fff;
+    background-color: #286090;
+    border: none;
+    cursor: pointer;
+    height: 46px;
+    border-radius: 4px;
+    font-size: 18px;
+    padding: 0 40px;
+    margin-bottom: 10px;
+  }
+
+  .router-btn:hover, .router-btn:focus, .router-btn.focus {
+    color: #333;
+    text-decoration: none;
+  }
+
+  video {
+    border: 1px solid lightgrey;
+    max-height: 80%;
+  }
+}

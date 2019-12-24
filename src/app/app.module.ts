@@ -10,10 +10,12 @@ import {AngularFireAuthModule} from '@angular/fire/auth';
 import {AngularFirestoreModule} from '@angular/fire/firestore';
 import {AngularFireModule} from '@angular/fire';
 import {LoginService} from './services/login.service';
+import { TutorialComponent } from './tutorial/tutorial.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TutorialComponent
   ],
   imports: [
     BrowserModule,

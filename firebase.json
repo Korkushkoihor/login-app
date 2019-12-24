@@ -1,0 +1,16 @@
+{
+  "hosting": {
+    "public": "dist/mental-arithmetic",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
